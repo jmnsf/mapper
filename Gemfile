@@ -38,6 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Console
+gem 'pry-rails'
+
 # Mapping / Geo Coding
 gem 'geocoder'
 gem 'leaflet-rails'
@@ -45,5 +48,6 @@ gem 'leaflet-rails'
 # Front End
 gem 'compass-rails'
 gem 'foundation-rails'
+gem 'haml'
 
 
