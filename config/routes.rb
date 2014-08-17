@@ -55,4 +55,14 @@ Rails.application.routes.draw do
   #   end
 
   root 'maps#index'
+
+  scope module: :api, defaults: { format: :json } do
+    scope module: :v1, format: :json do
+      resources :maps, only: [] do
+        collection do
+          get 'location'
+        end
+      end
+    end
+  end
 end

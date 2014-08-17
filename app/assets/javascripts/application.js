@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require namespaces
+//= require routes
 //= require_tree .
 //= require leaflet
 //= depend_on_asset "layers.png"
