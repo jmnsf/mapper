@@ -12,8 +12,10 @@
   </head>
 
   <body>
-
-    <%= yield %>
+    <div class="content">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag "application" %>
+    <script src="http://www.mapquestapi.com/sdk/leaflet/v1.0/mq-map.js?key=Fmjtd%7Cluur25uznq%2C8s%3Do5-9w70u6"></script>
   </body>
 </html>
