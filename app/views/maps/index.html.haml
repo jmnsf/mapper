@@ -1,4 +1,9 @@
-.row
-  .small-12.columns
-    This is a TEST
+.row.overlay
+  .small-4.small-centered.columns
+    .row.collapse.main-search-form
+      .small-10.columns
+        %input{ type: "text", placeholder: "Search for a Spot!" }
+      .small-2.columns
+        %a.button.postfix{ href: "#", class: "[radius round]" }
+          %i.fa.fa-search
 #main-leaflet-map

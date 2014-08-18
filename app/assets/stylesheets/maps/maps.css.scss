@@ -1,6 +1,29 @@
+body {}
+
+.row {
+  pointer-events: none;
+
+  &.overlay {
+    padding-top: 100px;
+    z-index: 1;
+    position: relative;
+  }
+
+  a, input, button {
+    pointer-events: all;
+  }
+}
+
+.main-search-form {
+  //padding-top: 16px 16px 0px 16px;
+  background: #FFF;
+  opacity: 0.8;
+}
+
 #main-leaflet-map {
+  pointer-events: all;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -20;
+  z-index: 0;
 }
