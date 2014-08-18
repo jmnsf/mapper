@@ -49,5 +49,6 @@ gem 'leaflet-rails'
 gem 'compass-rails'
 gem 'foundation-rails'
 gem 'haml'
-
+gem 'ember-rails'
+gem 'ember-source'
 
