@@ -2,20 +2,26 @@ MapSave.openMap = (elId, centerLat, centerLong, zoom) ->
   $("##{elId}").css('height', $(window).innerHeight())
   $("##{elId}").css('width', $(window).innerWidth())
 
-  mapLayer = MQ.mapLayer()
-  zoom ||= 4
+  zoom ||= 5
+  #mapLayer = MQ.mapLayer()
+
+  mapLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+    attribution: '© OpenStreetMap contributors'
+    detectRetina: true
+  )
 
   map = L.map(elId,
     layers: mapLayer
     center: [centerLat, centerLong]
     zoom: zoom
+    keyboard: false
   )
 
-  L.control.layers(
-    'Map': mapLayer
-    'Satellite': MQ.satelliteLayer()
-    'Hybrid': MQ.hybridLayer()
-  ).addTo(map)
+  # L.control.layers(
+  #   'Map': mapLayer
+  #   'Satellite': MQ.satelliteLayer()
+  #   'Hybrid': MQ.hybridLayer()
+  # ).addTo(map)
 
 # set map's height to window height
 $( ->
@@ -27,4 +33,4 @@ $( ->
   )
 )
 
-# '© OpenStreetMap contributors'
+#
